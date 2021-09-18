@@ -1,0 +1,71 @@
+.pag{
+    height: 100%;
+    background-color: black;
+}
+
+.people-card{
+    width: 500px;
+    display: inline-block;
+    align-items: center;
+    margin-right: 30px;
+    margin-top: 10px;
+    border: 3px solid;
+    border-color: gold;
+    color: white;
+}
+
+.planet-card{
+    width: 500px;
+    display: inline-block;
+    align-items: center;
+    margin-right: 30px;
+    margin-top: 10px;
+    border: 3px solid;
+    border-color: gold;
+    color: white;
+}
+
+.people-card td{
+    padding-right: 20px;
+}
+
+.home{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home h1{
+    position: absolute;
+    top: 200px;
+    font-size: 80px;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: gold;
+}
+
+.home h2{
+    position: relative;
+    top: -50px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: aliceblue;
+    margin-top: 200px;
+}
+
+.nav-menu{
+    border: 2px solid;
+    border-color: gold;
+    border-radius: 5px;
+}
+
+.nav-info{
+    margin-right: 50px;
+}
+
+.nav-item{
+    margin-left: 130px;
+    align-self: center;
+}
+

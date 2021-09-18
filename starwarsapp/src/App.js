@@ -30,7 +30,7 @@ const App = () => {
     getPlanets();
   }, [])
 
-  return <div>
+  return <div className="pag">
     <BrowserRouter>
       <Nav />
       <Container>
@@ -47,7 +47,6 @@ const App = () => {
         </Switch>
       </Container>
     </BrowserRouter>
-    
   </div>;
 }
 

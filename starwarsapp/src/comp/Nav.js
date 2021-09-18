@@ -4,21 +4,18 @@ import {Link} from 'react-router-dom';
 
 function Nav(){
     return(
-        <div>
-        <h1>Star Wars - Personagens</h1>
-        <h2>Conheça as principais informações sobre os seus personagens preferidos<br></br>
-            da saga com apenas alguns cliques!
-        </h2>
+        <div className="nav">
         <Menu inverted>
-            <Container>
-                <Link to="/">
-                    <Menu.Item name="star wars info"/>
+            <Container className="nav-menu">
+                <Menu.Item name="Star Wars Info" className="nav-info"/>
+                <Link to="/" className="nav-item">
+                    <Menu.Item name="Home"/>
                 </Link>
-                <Link to="/people">
-                    <Menu.Item name="people"/>
+                <Link to="/people" className="nav-item">
+                    <Menu.Item name="People"/>
                 </Link>
-                <Link to="/planets">
-                    <Menu.Item name="planets"/>
+                <Link to="/planets" className="nav-item">
+                    <Menu.Item name="Planets"/>
                 </Link>
             </Container>
         </Menu>

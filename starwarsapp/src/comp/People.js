@@ -1,13 +1,13 @@
 import React from "react";
-import Peoplestyle from './peoplestyle.css';
+import '../comp/style.css'
 
 export default function People({data}){
     return (
         <div>
-            {data.map((people, i) => {
+            {data.map((people) => {
                 return (
                     <table className="people-card">
-                        <tr>Nome: {people.name}</tr>
+                        <tr><td>Nome: {people.name}</td></tr>
                         <tr>Altura: {people.height}</tr>
                         <tr>Massa: {people.mass}</tr>
                         <tr>Cor do cabelo: {people.hair_color}</tr>
