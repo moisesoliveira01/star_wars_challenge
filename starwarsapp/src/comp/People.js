@@ -1,19 +1,23 @@
-import React from "react";
-import '../comp/style.css'
+import React, { useEffect } from "react";
+import {Link} from 'react-router-dom';
+import '../comp/style.css';
 
 export default function People({data}){
     return (
         <div>
             {data.map((people) => {
                 return (
-                    <table className="people-card">
-                        <tr><td>Nome: {people.name}</td></tr>
-                        <tr>Altura: {people.height}</tr>
-                        <tr>Massa: {people.mass}</tr>
-                        <tr>Cor do cabelo: {people.hair_color}</tr>
-                        <tr>Planeta Natal: {people.homeworld}</tr>
+                    <div className="people-card" key={people.name}>
+                        <p className="nome">Nome: {people.name}</p>
+                        <p>Altura: {people.height}</p>
+                        <p>Massa: {people.mass}</p>
+                        <p>Cor do cabelo: {people.hair_color}</p>
+                        <p>Cor da pele: {people.skin_color}</p>
+                        <p>Gênero: {people.gender}</p>
+                        <p>Ano de nascimento: {people.birth_year}</p>
+                        <p>Planeta Natal: <Link to={"/planets/?"+people.homeworld}>{people.homeworld}</Link></p>
                         <br></br>
-                    </table>
+                    </div>
                 );
             })};
         </div>

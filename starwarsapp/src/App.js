@@ -9,13 +9,12 @@ import Planets from './comp/Planets';
 const App = () => {
   const [people, setPeople] = useState([]);
   const [planets, setPlanets] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function getPeople(){
-      let response = await fetch('https://swapi.dev/api/people/?format=json');
-      let data = await response.json();
-
+      const response = await fetch('https://swapi.dev/api/people/?format=json');
+      const data = await response.json();
+      
       setPeople(data.results);
     }
 

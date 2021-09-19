@@ -4,29 +4,45 @@
 }
 
 .people-card{
+    padding: 15px;
     width: 500px;
     display: inline-block;
     align-items: center;
-    margin-right: 30px;
-    margin-top: 10px;
+    margin: 20px;
     border: 3px solid;
-    border-color: gold;
+    border-color: #ffff00;
+    border-radius: 25px;
     color: white;
+}
+
+.people-card .nome{
+    font-size: 25px;
 }
 
 .planet-card{
+    padding: 15px;
     width: 500px;
     display: inline-block;
     align-items: center;
-    margin-right: 30px;
-    margin-top: 10px;
+    margin: 20px;
     border: 3px solid;
-    border-color: gold;
+    border-color: #ffff00;
+    border-radius: 25px;
     color: white;
 }
 
-.people-card td{
-    padding-right: 20px;
+.planet-card .nome{
+    font-size: 25px;
+}
+
+.people-card p{
+    position: relative;
+    text-align-last: center;
+}
+
+.planet-card p{
+    position: relative;
+    text-align-last: center;
 }
 
 .home{
@@ -41,7 +57,7 @@
     top: 200px;
     font-size: 80px;
     -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: gold;
+    -webkit-text-stroke-color: #ffff00;
 }
 
 .home h2{
@@ -54,9 +70,55 @@
     margin-top: 200px;
 }
 
+.home .btn-people{
+    position: absolute;
+    right: 55%;
+    top: 200px;
+    border: 3px solid #ffff00;
+    border-radius: 15px;
+    padding: 10px 30px;
+    color: #ffff00;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: .1em;
+    margin-top: 300px;
+    background-color: Transparent;
+    cursor: pointer;
+}
+
+.home .btn-planets{
+    position: absolute;
+    right: 35%;
+    top: 200px;
+    border: 3px solid #ffff00;
+    border-radius: 15px;
+    padding: 10px 30px;
+    color: #ffff00;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: .1em;
+    margin-top: 300px;
+    background-color: Transparent;
+    cursor: pointer;
+}
+
+.home .btn-people:hover{
+    color: white;
+    border-color: white;
+}
+
+.home .btn-planets:hover{
+    color: white;
+    border-color: white;
+}
+
 .nav-menu{
     border: 2px solid;
-    border-color: gold;
+    border-color: #ffff00;
     border-radius: 5px;
 }
 
@@ -69,3 +131,30 @@
     align-self: center;
 }
 
+.nav-menu-item:hover{
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #ffff00;
+}
+
+.active{
+    border-color:red;
+}
+
+.active {
+    animation-duration: 2s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+    }
+  
+    to {
+      margin-left: 0%;
+    }
+  }
+
+.hidden{
+    display: none;
+}
