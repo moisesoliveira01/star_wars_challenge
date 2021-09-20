@@ -140,7 +140,7 @@
     border-color:red;
 }
 
-.active {
+/*.active {
     animation-duration: 2s;
     animation-name: slidein;
   }
@@ -153,8 +153,13 @@
     to {
       margin-left: 0%;
     }
-  }
+  }*/
 
 .hidden{
     display: none;
+}
+
+.label-pag{
+    position: absolute;
+    color: white;
 }

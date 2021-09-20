@@ -5,6 +5,7 @@ import Nav from './comp/Nav';
 import Home from './comp/Home';
 import People from './comp/People';
 import Planets from './comp/Planets';
+import api from './comp/api';
 
 const App = () => {
   const [people, setPeople] = useState([]);
@@ -12,15 +13,13 @@ const App = () => {
 
   useEffect(() => {
     async function getPeople(){
-      const response = await fetch('https://swapi.dev/api/people/?format=json');
-      const data = await response.json();
-      
+      const data = await api.get('people/?page=1').then((response) => {return response.data});
+
       setPeople(data.results);
     }
 
     async function getPlanets(){
-      let response = await fetch('https://swapi.dev/api/planets/?format=json');
-      let data = await response.json();
+      const data = await api.get('planets/?page=1').then((response) => {return response.data});
 
       setPlanets(data.results);
     }

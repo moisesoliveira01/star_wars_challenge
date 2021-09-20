@@ -10,7 +10,7 @@ export default function Planets({data}){
         if (url.includes(card.querySelector('.hidden').innerHTML)){
             card.classList.add('active');
 
-            const height = card.offsetTop;
+            const height = card.offsetTop - 100;
             window.scrollTo({
                 top: height,
                 behavior: "smooth"
