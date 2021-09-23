@@ -3,7 +3,25 @@
     background-color: black;
 }
 
-.people-card{
+.title{
+    font-size: 50px;
+    position: relative;
+    top: 10px;
+    color: #ffff00;
+    text-align: center;
+    margin: 10px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #ffff00;
+    font-family: 'StarWars';
+    letter-spacing: .1em;
+}
+
+@font-face {
+    font-family: 'StarWars';
+    src: url('./Starjedi.ttf');
+}
+
+.card{
     padding: 15px;
     width: 500px;
     display: inline-block;
@@ -13,36 +31,23 @@
     border-color: #ffff00;
     border-radius: 25px;
     color: white;
+    animation-duration: 3s;
+    animation-name: fadein;
+    font-family: 'StarWars';
 }
 
-.people-card .nome{
+.card .nome{
     font-size: 25px;
 }
 
-.planet-card{
-    padding: 15px;
-    width: 500px;
-    display: inline-block;
-    align-items: center;
-    margin: 20px;
-    border: 3px solid;
-    border-color: #ffff00;
-    border-radius: 25px;
-    color: white;
-}
-
-.planet-card .nome{
-    font-size: 25px;
-}
-
-.people-card p{
+.card p{
     position: relative;
     text-align-last: center;
+    transition: transform 0.5s;
 }
 
-.planet-card p{
-    position: relative;
-    text-align-last: center;
+.card p:hover{
+    transform: translateX(10px) scale(1.2);
 }
 
 .home{
@@ -50,6 +55,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    animation-duration: 3s;
+    animation-name: fadein;
 }
 
 .home h1{
@@ -58,6 +65,7 @@
     font-size: 80px;
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: #ffff00;
+    font-family: 'StarWars';
 }
 
 .home h2{
@@ -68,6 +76,7 @@
     text-align: center;
     color: aliceblue;
     margin-top: 200px;
+    font-family: 'StarWars';
 }
 
 .home .btn-people{
@@ -117,6 +126,7 @@
 }
 
 .nav-menu{
+    width: 100%;
     border: 2px solid;
     border-color: #ffff00;
     border-radius: 5px;
@@ -124,11 +134,13 @@
 
 .nav-info{
     margin-right: 50px;
+    font-family: 'StarWars';
 }
 
 .nav-item{
     margin-left: 130px;
     align-self: center;
+    font-family: 'StarWars';
 }
 
 .nav-menu-item:hover{
@@ -137,29 +149,89 @@
 }
 
 .active{
-    border-color:red;
+    animation-duration: 2s;
+    animation-name: bounce, fadein;
 }
 
-/*.active {
-    animation-duration: 2s;
-    animation-name: slidein;
-  }
+.active .nome{
+    color: #ffff00;
+}
   
-  @keyframes slidein {
+@keyframes bounce {
     from {
-      margin-left: 100%;
+      transform: translateY(0px);
     }
-  
     to {
-      margin-left: 0%;
+      transform: translateY(-15px);
     }
-  }*/
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
 
 .hidden{
     display: none;
 }
 
+.btn-pag{
+    position: relative;
+    left: 90%;
+    padding: 5px;
+    margin: 5px;
+    border: 3px solid #ffff00;
+    border-radius: 15px;
+    color: #ffff00;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: .1em;
+    background-color: transparent;
+}
+
+.btn-pag:hover{
+    cursor: pointer;
+    color: white;
+    border-color: white;
+}
+
 .label-pag{
     position: absolute;
+    left: 8%;
+    margin: 10px;
     color: white;
+    font-family: 'StarWars';
+}
+
+.btn-disabled{
+    color: gray;
+    border-color: gray;
+}
+
+.btn-disabled:hover{
+    cursor: auto;
+    color: gray;
+    border-color: gray;
+}
+
+@media only screen and (min-width: 468px) and (max-width:1059px){
+    .home h1{
+        font-size: 30px;
+        padding: 0px;
+    }
+
+    .home h2{
+        font-size: 15px;
+    }
+
+    .home .btn-people{
+        align-self: center;
+        position: relative;
+        margin: 10px;
+    }
+    .home .btn-planets{
+        position: relative;
+        margin: 10px;
+    }
 }

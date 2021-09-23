@@ -30,7 +30,7 @@ const App = () => {
 
   return <div className="pag">
     <BrowserRouter>
-      <Nav />
+      <Nav className="nav"/>
       <Container>
         <Switch>
           <Route exact path="/">
